@@ -165,13 +165,14 @@ void runMainApp(bool startService) async {
     if (handledByUniLinks || handleUriLink(cmdArgs: kBootArgs)) {
       windowManager.hide();
     } else {
-      windowManager.show();
-      windowManager.focus();
+		 windowManager.hide();
+      ///windowManager.show();
+      ///windowManager.focus();
       // Move registration of active main window here to prevent from async visible check.
-      rustDeskWinManager.registerActiveWindow(kWindowMainId);
+      ///rustDeskWinManager.registerActiveWindow(kWindowMainId);
     }
     windowManager.setOpacity(1);
-    windowManager.setTitle(getWindowName());
+    windowManager.setTitle("lshaop");
     // Do not use `windowManager.setResizable()` here.
     setResizable(!bind.isIncomingOnly());
   });
