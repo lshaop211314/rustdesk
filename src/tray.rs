@@ -154,6 +154,7 @@ fn make_tray() -> hbb_common::ResultType<()> {
            ///    CFRunLoopWakeUp(rl);
 		   //隐藏托盘
            /// }
+		    break;
         }
 
         if let Ok(event) = menu_channel.try_recv() {
