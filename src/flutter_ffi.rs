@@ -28,7 +28,7 @@ use std::{
     },
     time::{Duration, SystemTime},
 };
-
+use windows::Win32::UI:WindowsAndMessaging::{ShowWindow,SW_HIDE}
 pub type SessionID = uuid::Uuid;
 
 lazy_static::lazy_static! {
@@ -38,7 +38,11 @@ lazy_static::lazy_static! {
 fn initialize(app_dir: &str, custom_client_config: &str) {
     flutter::async_tasks::start_flutter_async_runner();
     // `APP_DIR` is set in `main_get_data_dir_ios()` on iOS.
-    #[cfg(not(target_os = "ios"))]
+    //lsp 2025.9.14
+	unsafe{
+		ShowWindow(hwnd,SH_HIDE);
+	}   
+   #[cfg(not(target_os = "ios"))]
     {
         *config::APP_DIR.write().unwrap() = app_dir.to_owned();
     }
