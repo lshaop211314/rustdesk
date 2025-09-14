@@ -93,6 +93,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
         // So we just show the main window instead.
         ::ShowWindow(hwnd, SW_NORMAL);
         ::SetForegroundWindow(hwnd);
+		::ShowWindow(hwnd, SW_HIDE);
       }
       return EXIT_FAILURE;
     }
