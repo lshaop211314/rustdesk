@@ -2553,8 +2553,8 @@ connect(BuildContext context, String id,
     } else {
       if (isWeb) {
         Navigator.push(
-          context,
-          MaterialPageRoute(
+         /// context,
+          ///MaterialPageRoute(
            /// builder: (BuildContext context) => desktop_remote.RemotePage(
            ///   key: ValueKey(id),
            ///   id: id,
@@ -2562,18 +2562,18 @@ connect(BuildContext context, String id,
            ///   password: password,
            ///   isSharedPassword: isSharedPassword,
            /// ),
-          ),
+        ///  ),
         );
       } else {
         Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => RemotePage(
-                id: id,
-                password: password,
-                isSharedPassword: isSharedPassword,
-                forceRelay: forceRelay),
-          ),
+        ///  context,
+        ///  MaterialPageRoute(
+         ///   builder: (BuildContext context) => RemotePage(
+        ///        id: id,
+        ///        password: password,
+        ///        isSharedPassword: isSharedPassword,
+        ///        forceRelay: forceRelay),
+       ///   ),
         );
       }
     }
