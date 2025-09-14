@@ -66,10 +66,10 @@ Future<void> main(List<String> args) async {
     switch (kWindowType) {
       case WindowType.RemoteDesktop:
         desktopType = DesktopType.remote;
-        runMultiWindow(
-          argument,
-          kAppTypeDesktopRemote,
-        );
+        ///runMultiWindow(
+        ///  argument,
+        ///  kAppTypeDesktopRemote,
+       /// );
         break;
       case WindowType.FileTransfer:
         desktopType = DesktopType.fileTransfer;
