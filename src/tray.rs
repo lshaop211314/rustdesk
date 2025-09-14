@@ -137,7 +137,7 @@ fn make_tray() -> hbb_common::ResultType<()> {
                 .with_icon(icon.clone())
                 .with_icon_as_template(true) // mac only
 					;
-			   //.build();
+			   .build();
             match tray {
                 Ok(tray) => _tray_icon = Arc::new(Mutex::new(Some(tray))),
                 Err(err) => {

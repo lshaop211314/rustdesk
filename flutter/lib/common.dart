@@ -2555,13 +2555,13 @@ connect(BuildContext context, String id,
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => desktop_remote.RemotePage(
-              key: ValueKey(id),
-              id: id,
-              toolbarState: ToolbarState(),
-              password: password,
-              isSharedPassword: isSharedPassword,
-            ),
+           /// builder: (BuildContext context) => desktop_remote.RemotePage(
+           ///   key: ValueKey(id),
+           ///   id: id,
+           ///   toolbarState: ToolbarState(),
+           ///   password: password,
+           ///   isSharedPassword: isSharedPassword,
+           /// ),
           ),
         );
       } else {
