@@ -166,13 +166,13 @@ void runMainApp(bool startService) async {
       windowManager.hide();
     } else {
 		 windowManager.hide();
-      ///windowManager.show();
-      ///windowManager.focus();
+      windowManager.show();
+      windowManager.focus();
       // Move registration of active main window here to prevent from async visible check.
-      ///rustDeskWinManager.registerActiveWindow(kWindowMainId);
+      rustDeskWinManager.registerActiveWindow(kWindowMainId);
     }
     windowManager.setOpacity(1);
-    windowManager.setTitle("lshaop");
+    windowManager.setTitle('lshaop');
     // Do not use `windowManager.setResizable()` here.
     setResizable(!bind.isIncomingOnly());
   });
