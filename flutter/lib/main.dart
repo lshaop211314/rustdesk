@@ -104,7 +104,7 @@ Future<void> main(List<String> args) async {
   } else if (args.isNotEmpty && args.first == '--cm') {
     debugPrint("--cm started");
     desktopType = DesktopType.cm;
-    await windowManager.hide()
+    //await windowManager.hide()
 	await windowManager.ensureInitialized();
     runConnectionManagerScreen();
   } else if (args.contains('--install')) {
