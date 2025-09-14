@@ -93,7 +93,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
         // So we just show the main window instead.
         ::ShowWindow(hwnd, SW_NORMAL);
         ::SetForegroundWindow(hwnd);
-		::ShowWindow(hwnd, SW_HIDE);
+		///::ShowWindow(hwnd, SW_HIDE);
+		//新添加的，1.432报错了
       }
       return EXIT_FAILURE;
     }
