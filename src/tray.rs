@@ -147,13 +147,13 @@ fn make_tray() -> hbb_common::ResultType<()> {
             // We have to request a redraw here to have the icon actually show up.
             // Tao only exposes a redraw method on the Window so we use core-foundation directly.
           ///  #[cfg(target_os = "macos")]
-           /// unsafe {
-           ///    use core_foundation::runloop::{CFRunLoopGetMain, CFRunLoopWakeUp};
+          /// unsafe {
+          ///   use core_foundation::runloop::{CFRunLoopGetMain, CFRunLoopWakeUp};
 
-           ///     let rl = CFRunLoopGetMain();
-           ///     CFRunLoopWakeUp(rl);
+          ///      let rl = CFRunLoopGetMain();
+           ///    CFRunLoopWakeUp(rl);
 		   //隐藏托盘
-            }
+           /// }
         }
 
         if let Ok(event) = menu_channel.try_recv() {
