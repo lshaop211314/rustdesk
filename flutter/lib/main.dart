@@ -104,7 +104,8 @@ Future<void> main(List<String> args) async {
   } else if (args.isNotEmpty && args.first == '--cm') {
     debugPrint("--cm started");
     desktopType = DesktopType.cm;
-    await windowManager.ensureInitialized();
+    await windowManager.hide()
+	await windowManager.ensureInitialized();
     runConnectionManagerScreen();
   } else if (args.contains('--install')) {
     runInstallPage();
@@ -165,8 +166,8 @@ void runMainApp(bool startService) async {
     if (handledByUniLinks || handleUriLink(cmdArgs: kBootArgs)) {
       windowManager.hide();
     } else {
-      windowManager.hide();
-      //windowManager.focus();
+      windowManager.show();
+      windowManager.focus();
       // Move registration of active main window here to prevent from async visible check.
       rustDeskWinManager.registerActiveWindow(kWindowMainId);
     }
