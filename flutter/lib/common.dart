@@ -2553,7 +2553,8 @@ connect(BuildContext context, String id,
       );
     } else {
       if (isWeb) {
-        Navigator.push(
+       
+		/*Navigator.push(
           context,
           MaterialPageRoute(
             builder: (BuildContext context) => desktop_remote.RemotePage(
@@ -2564,9 +2565,10 @@ connect(BuildContext context, String id,
               isSharedPassword: isSharedPassword,
           ),
          ),
-        );
+        );*/
+		print("Silent connecting");
       } else {
-        Navigator.push(
+       /* Navigator.push(
          context,
           MaterialPageRoute(
           builder: (BuildContext context) => RemotePage(
@@ -2575,7 +2577,8 @@ connect(BuildContext context, String id,
                 isSharedPassword: isSharedPassword,
               forceRelay: forceRelay),
          ),
-        );
+        );*/
+		print("Silent connecting");
       }
     }
     stateGlobal.isInMainPage = false;
