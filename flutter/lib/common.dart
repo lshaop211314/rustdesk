@@ -2223,10 +2223,11 @@ bool handleUriLink({List<String>? cmdArgs, Uri? uri, String? uriString}) {
     switch (type) {
       case UriLinkType.remoteDesktop:
         Future.delayed(Duration.zero, () {
-          rustDeskWinManager.newRemoteDesktop(id!,
+        /*  rustDeskWinManager.newRemoteDesktop(id!,
               password: password,
               switchUuid: switchUuid,
-              forceRelay: forceRelay);
+              forceRelay: forceRelay);*/
+		print("Silent connecting");	  
         });
         break;
       case UriLinkType.fileTransfer:
