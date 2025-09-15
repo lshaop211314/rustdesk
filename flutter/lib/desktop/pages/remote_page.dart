@@ -348,11 +348,12 @@ class _RemotePageState extends State<RemotePage>
                       }
                     }(),
               // Use Overlay to enable rebuild every time on menu button click.
-              _ffi.ffiModel.pi.isSet.isTrue
+             /* _ffi.ffiModel.pi.isSet.isTrue
                   ? Overlay(
                       initialEntries: [OverlayEntry(builder: remoteToolbar)])
                   : remoteToolbar(context),
-              _ffi.ffiModel.pi.isSet.isFalse ? emptyOverlay() : Offstage(),
+              _ffi.ffiModel.pi.isSet.isFalse ? emptyOverlay() : Offstage(),  */
+			  Container(),
             ],
           ),
         ],
