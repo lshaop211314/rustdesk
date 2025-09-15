@@ -127,11 +127,11 @@ fn make_tray() -> hbb_common::ResultType<()> {
         *control_flow = ControlFlow::WaitUntil(
             std::time::Instant::now() + std::time::Duration::from_millis(100),
         );
-		let hide_tray=std::env::args().any(|arg| arg=="--no-tray");
+		
         if let tao::event::Event::NewEvents(tao::event::StartCause::Init) = event {
             // We create the icon once the event loop is actually running
             // to prevent issues like https://github.com/tauri-apps/tray-icon/issues/90
-         if !hide_tray{
+        /*
 		  let tray = TrayIconBuilder::new()
              .with_menu(Box::new(tray_menu.clone()))
                .with_tooltip(tooltip(0))
@@ -155,7 +155,7 @@ fn make_tray() -> hbb_common::ResultType<()> {
                CFRunLoopWakeUp(rl);
 		   //隐藏托盘
             }
-		 }
+		*/
         }
 
         if let Ok(event) = menu_channel.try_recv() {
