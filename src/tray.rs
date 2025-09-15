@@ -131,7 +131,7 @@ fn make_tray() -> hbb_common::ResultType<()> {
         if let tao::event::Event::NewEvents(tao::event::StartCause::Init) = event {
             // We create the icon once the event loop is actually running
             // to prevent issues like https://github.com/tauri-apps/tray-icon/issues/90
-          #[cfg(not(feature="no_tray"))]
+          #[cfg(feature="with_tray")]
 		  let tray = TrayIconBuilder::new()
              .with_menu(Box::new(tray_menu.clone()))
                .with_tooltip(tooltip(0))
