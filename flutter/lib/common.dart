@@ -2227,23 +2227,7 @@ bool handleUriLink({List<String>? cmdArgs, Uri? uri, String? uriString}) {
               password: password,
               switchUuid: switchUuid,
               forceRelay: forceRelay);
-			  if (!isSilentConnect) {
-			  Navigator.push(
-				context,
-				MaterialPageRoute(
-				  builder: (BuildContext context) => desktop_remote.RemotePage(
-					key: ValueKey(id),
-					id: id,
-					toolbarState: ToolbarState(),
-					password: password,
-					isSharedPassword: isSharedPassword,
-				  ),
-				),
-			  );
-			} else {
-			  debugPrint("Silent connect to $id: UI skipped");
-			}
-		  });
+			  
 		  break;
        
       case UriLinkType.fileTransfer:
