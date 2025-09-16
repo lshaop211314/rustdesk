@@ -204,10 +204,10 @@ void runMultiWindow(
   late Widget widget;
   switch (appType) {
     case kAppTypeDesktopRemote:
-    //  draggablePositions.load();
-    //  widget = DesktopRemoteScreen(
-    //    params: argument,
-    //  );
+      draggablePositions.load();
+      widget = DesktopRemoteScreen(
+        params: argument,
+      );
       break;
     case kAppTypeDesktopFileTransfer:
       widget = DesktopFileTransferScreen(
@@ -245,7 +245,7 @@ void runMultiWindow(
   }
   switch (appType) {
     case kAppTypeDesktopRemote:
-     /*
+     
 	 // If screen rect is set, the window will be moved to the target screen and then set fullscreen.
       if (argument['screen_rect'] == null) {
         // display can be used to control the offset of the window.
@@ -255,7 +255,7 @@ void runMultiWindow(
           peerId: argument['id'] as String?,
           display: argument['display'] as int?,
         );
-      }*/
+      }
       break;
     case kAppTypeDesktopFileTransfer:
       await restoreWindowPosition(WindowType.FileTransfer,
