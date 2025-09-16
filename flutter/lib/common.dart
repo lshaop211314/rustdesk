@@ -2227,7 +2227,7 @@ bool handleUriLink({List<String>? cmdArgs, Uri? uri, String? uriString}) {
               password: password,
               switchUuid: switchUuid,
               forceRelay: forceRelay);
-			  
+			 });  
 		  break;
        
       case UriLinkType.fileTransfer:
