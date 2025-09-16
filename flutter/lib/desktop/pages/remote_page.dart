@@ -500,7 +500,7 @@ class _RemotePageState extends State<RemotePage>
           () => _ffi.ffiModel.pi.isSet.isFalse
               ? Container(color: Colors.transparent)
               : Obx(() {
-                 widget.toolbarState.initShow(sessionId);
+                // widget.toolbarState.initShow(sessionId);
                   _ffi.textureModel.updateCurrentDisplay(peerDisplay.value);
                   return ImagePaint(
                     id: widget.id,
