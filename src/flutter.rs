@@ -1583,9 +1583,9 @@ pub mod connection_manager {
             ui_handler: FlutterHandler {},
         };
         if new_thread {
-            std::thread::spawn(move || start_ipc(cm));
+         //   std::thread::spawn(move || start_ipc(cm));
         } else {
-            start_ipc(cm);
+         //   start_ipc(cm);
         }
     }
 
@@ -1593,6 +1593,7 @@ pub mod connection_manager {
     pub fn cm_init() {
         #[cfg(not(any(target_os = "android", target_os = "ios")))]
         start_listen_ipc_thread();
+	   break;
     }
 
     #[cfg(target_os = "android")]
