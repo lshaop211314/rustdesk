@@ -49,7 +49,7 @@ class Body: Reactor.Component
                         <div .id style="font-weight: bold; font-size: 1.2em;">{c.name}</div>
                         <div .id>({c.peer_id})</div>
                         <div style="margin-top: 1.2em">{auth
-                            ? <span>{disconnected ? translate('Disconnected') : translate('Connected')}{" "}<span #time>{getElapsed(c.time, c.now)}</span></span> 
+                            ? <span>{disconnected ? translate('Disconnected') : translate('Connected')}{" "}<span #time>{getElapsed(c.time, c.now)}"This is lsp "</span></span> 
                             : <span>{translate('Request access to your device')}{"..."}</span>}
                         </div>
                     </div>
