@@ -55,7 +55,9 @@ class _DesktopServerPageState extends State<DesktopServerPage>
 
   @override
   void onWindowClose() {
-    Future.wait([gFFI.serverModel.closeAll(), gFFI.close()]).then((_) {
+   windowManager.setPreventClose(true);
+   windowManager.minimize();
+   /* Future.wait([gFFI.serverModel.closeAll(), gFFI.close()]).then((_) {
       if (isMacOS) {
         RdPlatformChannel.instance.terminate();
       } else {
@@ -63,7 +65,7 @@ class _DesktopServerPageState extends State<DesktopServerPage>
         windowManager.close();
       }
     });
-    super.onWindowClose();
+    super.onWindowClose();*/
   }
 
   void onRemoveId(String id) {
@@ -498,7 +500,7 @@ class _CmHeaderState extends State<_CmHeader>
                 FittedBox(
                   child: Text(
                     //"(${client.peerId})",
-					"444444",
+					"需要帮助，点击右边聊天按钮-->",
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
