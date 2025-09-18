@@ -331,8 +331,8 @@ showCmWindow({bool isStartup = false}) async {
       await windowManager.minimize(); //needed
       await windowManager.setSizeAlignment(
           kConnectionManagerWindowSizeClosedChat, Alignment.topRight);
-      windowOnTop(null); */
-    }
+      windowOnTop(null); 
+    }*/
   }
 }
 
