@@ -310,30 +310,32 @@ void runConnectionManagerScreen() async {
 bool _isCmReadyToShow = false;
 
 showCmWindow({bool isStartup = false}) async {
-  if (isStartup) {
+ /* if (isStartup) {
     WindowOptions windowOptions = getHiddenTitleBarWindowOptions(
-        size: kConnectionManagerWindowSizeClosedChat, alwaysOnTop: true, taskbar: false);
+        size: kConnectionManagerWindowSizeClosedChat, alwaysOnTop: true);
     await windowManager.waitUntilReadyToShow(windowOptions, null);
     bind.mainHideDock();
-    /*await Future.wait([
+    await Future.wait([
       windowManager.show(),
       windowManager.focus(),
       windowManager.setOpacity(1)
-    ]);*/
+    ]);
     // ensure initial window size to be changed
     await windowManager.setSizeAlignment(
         kConnectionManagerWindowSizeClosedChat, Alignment.topRight);
     _isCmReadyToShow = true;
   } else if (_isCmReadyToShow) {
-    /* if (await windowManager.getOpacity() != 1) {
+    if (await windowManager.getOpacity() != 1) {
       await windowManager.setOpacity(1);
       await windowManager.focus();
       await windowManager.minimize(); //needed
       await windowManager.setSizeAlignment(
           kConnectionManagerWindowSizeClosedChat, Alignment.topRight);
       windowOnTop(null); 
-    }*/
-  }
+    }
+  }*/
+  //既不创建窗口，也不显示任务栏图标
+  return;
 }
 
 hideCmWindow({bool isStartup = false}) async {
