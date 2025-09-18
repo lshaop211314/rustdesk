@@ -497,7 +497,8 @@ class _CmHeaderState extends State<_CmHeader>
                 )),
                 FittedBox(
                   child: Text(
-                    "(${client.peerId})",
+                    //"(${client.peerId})",
+					"444444",
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
@@ -627,7 +628,9 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
 
   @override
   Widget build(BuildContext context) {
-    final crossAxisCount = 4;
+    return const SizedBox.shrink();
+	/*
+	final crossAxisCount = 4;
     final spacing = 10.0;
     return Container(
       width: double.infinity,
@@ -797,7 +800,8 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
           ),
         ],
       ),
-    );
+    );*/
+	
   }
 }
 
