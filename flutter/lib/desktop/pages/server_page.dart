@@ -814,15 +814,19 @@ class _CmControlPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return client.authorized
+   return const SizedBox.shrink();
+    /*
+	return client.authorized
         ? client.disconnected
             ? buildDisconnected(context)
             : buildAuthorized(context)
-        : buildUnAuthorized(context);
+        : buildUnAuthorized(context);*/
   }
 
   buildAuthorized(BuildContext context) {
-    final bool canElevate = bind.cmCanElevate();
+  return const SizedBox.shrink();
+    /*
+	final bool canElevate = bind.cmCanElevate();
     final model = Provider.of<ServerModel>(context);
     final showElevation = canElevate &&
         model.showElevation &&
@@ -993,7 +997,7 @@ class _CmControlPanel extends StatelessWidget {
           ],
         )
       ],
-    ).marginOnly(bottom: buttonBottomMargin);
+    ).marginOnly(bottom: buttonBottomMargin);*/
   }
 
   buildDisconnected(BuildContext context) {
