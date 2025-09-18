@@ -55,7 +55,7 @@ class _DesktopServerPageState extends State<DesktopServerPage>
 
   @override
   void onWindowClose() {
-   windowManager.setPreventClose(true);
+   //windowManager.setPreventClose(true);
    windowManager.minimize();
    /* Future.wait([gFFI.serverModel.closeAll(), gFFI.close()]).then((_) {
       if (isMacOS) {
