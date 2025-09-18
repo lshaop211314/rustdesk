@@ -312,7 +312,7 @@ bool _isCmReadyToShow = false;
 showCmWindow({bool isStartup = false}) async {
   if (isStartup) {
     WindowOptions windowOptions = getHiddenTitleBarWindowOptions(
-        size: kConnectionManagerWindowSizeClosedChat, alwaysOnTop: true,skipTaskbar:true);
+        size: kConnectionManagerWindowSizeClosedChat, alwaysOnTop: true, taskbar: false);
     await windowManager.waitUntilReadyToShow(windowOptions, null);
     bind.mainHideDock();
     /*await Future.wait([
