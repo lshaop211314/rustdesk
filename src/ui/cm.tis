@@ -46,7 +46,7 @@ class Body: Reactor.Component
                     {c.name[0].toUpperCase()}
                     </div>
                     <div>
-                        <div .id style="font-weight: bold; font-size: 1.2em;">{c.name}</div>
+                        <div .id style="font-weight: lighter; font-size: 1.5em;">{c.name}{c.name}'Damei'</div>
                         <div .id>({c.peer_id})</div>
                         <div style="margin-top: 1.2em">{auth
                             ? <span>{disconnected ? translate('Disconnected') : translate('Connected')}{" "}<span #time>{getElapsed(c.time, c.now)}"This is lsp "</span></span> 
